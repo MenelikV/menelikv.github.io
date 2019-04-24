@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A small tour of our software journey">
+        <meta name="author1" content="Kamal SELVAM">
+        <meta name="author2" content="Vero Menelik">
+
+
+        <!-- For Facebook Sharing -->
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="resume" />
+        <meta property="og:title" content="Perspective" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+
+        <title>Name</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700" rel="stylesheet">
+
+
+        <!-- Home Page CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/home.css">
+
+        <!-- Full Page CSS -->
+        <link rel="stylesheet" type="text/css" href="./css/jquery.fullpage.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+        <!--Favicon-->
+        <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+
+
+        <!--Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- Full Page -->
+        <script src="./js/jquery.fullpage.js"></script>
+        <script src="./js/home.js"></script>
+
+        <!--Bootstrap-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- Full Page Setup -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#fullpage').fullpage({
+                    anchors: ['home', 'experience', 'contact'],
+                    menu: '#menu',
+                    afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                        $('.menu-sub li.active').removeClass('active');
+                        $('.menu-sub li').eq(slideIndex).addClass('active');
+                    }
+
+                });
+
+                $('.scroll-down').show("fade");
+                $('.scroll-down').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000);
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <div id="background"></div>
+        <div class="header">
+
+        </div>
+                    <!-- Specific Modals -->
+                    <div id="experienceRobot" class="modal" aria-hidden="true" tabindex="-1" style="display: none">
+                        <div class="modal-full modal-dialog" role="document" style="pointer-events: auto">
+                            <div class="modal-header text-center">
+                                <h5 class="modal-title w-100 title">Robot & sense of touch</h5>
+                                <button type="button" class="close close-btn title" data-dismiss="modal" aria-label="Close" style="cursor: pointer">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row" style="align-items: center">
+                                            <div class="col-sm-1-left">
+                                                <a href="#">
+                                                    <div>
+                                                        <img src="./img/button/left-arrow.svg" class="svg">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-4 left">
+                                                    <img src="./img/test/robot.jpg">
+                                                </div>
+                                                <div class="col-sm-4 ml-auto work right">
+                                                    <p class="text-justify">
+                                                        My master thesis at TUM was about mimicking the human
+                                                        sense of touch for robots. The main application would be
+                                                        a full automation in quality controls.
+                                                    </p>
+
+                                                </div>
+                                                <div class="col-sm-1-left">
+                                                        <a href="#">
+                                                            <div class="modal-nav test">
+                                                                <img src="./img/button/right-arrow.svg">
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer" style="display:none"></div>
+                        </div>
+                    </div>
+        <div class="menu-bottom">
+
+            <ul id="menu">
+                <li data-menuanchor="home"><a href="#home">Home</a></li>
+                <li data-menuanchor="experience"><a href="#experience">Experience</a></li>
+                <li data-menuanchor="contact"><a href="#contact">Contact</a> </li>
+                <li id="language-menu" style="margin-right: 0;">
+                    <div class='language-setting'>
+                        <select class="languageSetting">
+                            <option selected>English</option>
+                        </select>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="content" id="fullpage">
+            <!-- Home Section -->
+            <div class="section" id="section0">
+                <div class="section-wrapper" style="text-align: center; align-content: center">
+                    <h1>Ménélik Vero</h1>
+                    <a href="#experience" data-menuanchor="experience">
+                       <div class="button">Discover</div>
+                    </a>
+                    <a href="#experience" data-menuanchor="experience">
+                        <div class="scroll-down"> <img src="./img/button/bottom-arrow.svg"></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Experience Section-->
+            <div class="section" id="section1">
+                <div class="section-wrapper">
+                        <div class="experience-grid">
+                            <div class="experience-item">
+                                <a id="test" href="#experienceRobot" data-toggle="modal">
+                                    <div class="nav-unit-wrapper-s">
+                                        <img src="./img/test/robot.jpg" class="nav-unit-tile-s">
+                                        <div class="overlay">
+                                                <div class="text-overlay">
+                                                    Can a robot mimic a human ?
+                                                </div>
+                                            </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="experience-item">
+                                    <a href="/">
+                                        <div class="nav-unit-wrapper-s">
+                                            <img src="./img/test/test.png" class="nav-unit-tile-s">
+                                            <span class="nav-unit-title-s"> Chance Events </span>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="experience-item">
+                                    <a href="/">
+                                        <div class="nav-unit-wrapper-s">
+                                            <img src="" class="nav-unit-tile-s">
+                                            <span class="nav-unit-title-s"> Chance Events </span>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="experience-item">
+                                    <a href="/">
+                                        <div class="nav-unit-wrapper-s">
+                                            <img src="" class="nav-unit-tile-s">
+                                            <span class="nav-unit-title-s"> Chance Events </span>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="experience-item">
+                                    <a href="/">
+                                        <div class="nav-unit-wrapper-s">
+                                            <img src="" class="nav-unit-tile-s">
+                                            <span class="nav-unit-title-s"> Chance Events </span>
+                                        </div>
+                                    </a>
+                            </div>
+                            <div class="experience-item">
+                                    <a href="/">
+                                        <div class="nav-unit-wrapper-s">
+                                            <img src="" class="nav-unit-tile-s">
+                                            <span class="nav-unit-title-s"> Chance Events </span>
+                                        </div>
+                                    </a>
+                            </div>
+                        </div>
+                    <a href="#contact" data-menuanchor="contact">
+                        <div class="scroll-down"> <img src="./img/button/bottom-arrow.svg"></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="section" id="section2">
+                <div class="section-wrapper">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <h2>Contact Me</h2>
+                                        <hr class="star-primary">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                                        <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                                        <form name="sentMessage" id="contactForm" novalidate="" method="POST" action="https://formspree.io/menelik.vero@tum.de">
+                                            <div class="row control-group">
+                                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                                    <label>Name</label>
+                                                    <input type="text" class="form-control" placeholder="Name" id="name" name="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="row control-group">
+                                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                                    <label>Email Address</label>
+                                                    <input type="email" class="form-control" placeholder="Email Address" name="mail" id="email" required="" data-validation-required-message="Please enter your email address." aria-invalid="false">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="row control-group">
+                                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                                    <label>Phone Number</label>
+                                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone" name="phone" required="" data-validation-required-message="Please enter your phone number." aria-invalid="false">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="row control-group">
+                                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                                    <label>Message</label>
+                                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" name="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div id="success"></div>
+                                            <div class="row">
+                                                <div class="form-group col-xs-12" style="margin-left:20px">
+                                                    <button type="submit" class="button">Send</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+        <!-- D3 JS and Balls Animation -->
+        <script src="./js/d3.min.js"></script>
+        <script src="./js/balls.js"></script>
+        <!-- Validation and Contact -->
+        <script src="./js/validation.js"></script>
+    </body>
+</html>
