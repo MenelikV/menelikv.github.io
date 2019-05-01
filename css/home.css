@@ -23,7 +23,9 @@ body{
 
 }
 
-
+.list-group-item {
+	color: black;
+}
 
 h1{
 
