@@ -2,6 +2,7 @@
 /* Bare minimum */
 :root {
 	--user-background-color: rgb(66, 64, 71);
+	--modal-background: #FFFBFE
 }
 
 
@@ -206,7 +207,6 @@ h2{
 	min-width: auto;
 	left: auto;
 	right: auto;
-	transform: translate(30%, 0%);
 }
 
 .thumbnails{
@@ -217,6 +217,7 @@ h2{
 	position: relative;
 	text-align: center;
 	display: flex; /* Allows the pics to have the same size*/
+	margin: 8%;
 }
 
 a{
@@ -238,7 +239,7 @@ a{
 }
 
 .close:hover{
-	color: fuchsia;
+	color: black;
 	opacity: 1;
 }
 .close{
@@ -274,7 +275,6 @@ a{
 	opacity: 0;
 	transition: .5s ease;
 	background-color: rgb(255, 255, 255);
-	transform: translate(30%, 0)
   }
   
   .thumbnails:hover .overlay {
@@ -321,13 +321,15 @@ a{
 	margin: 0;
 	min-width: 100%;
 	min-height: 100%;
-	color: #FFFBFE;
-	background-color: #FFFBFE;
+	color: var(--modal-background);
+	background-color:var(--modal-background);
 }
 
 .modal-content{
 	outline: none;
 	border: none;
+	color: var(--modal-background);
+	background-color: var(--modal-background);
 }
 
 
@@ -501,6 +503,10 @@ input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:
 	backface-visibility: hidden;
 }
 
+.navr{
+	cursor: pointer;
+}
+
 
 @-webkit-keyframes bounceright {
 	from { -webkit-transform: translateX(0); }
@@ -512,15 +518,24 @@ input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:
 	to   { transform: translateX(5px); }
 }
 
+@-webkit-keyframes bounceleft {
+	from { -webkit-transform: translateX(0); }
+	to   { -webkit-transform: translateX(-5px); }
+}
 
-.nav-left:hover:after{
+@keyframes bounceleft {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-5px); }
+}
+
+.nav-left:hover, .nav-left:focus{
 	-webkit-animation: bounceleft .3s alternate ease infinite;
 	animation: bounceleft .3s alternate ease infinite;
 }
 
-.nav-right:hover:after{
+
+.nav-right:hover, .nav-right:focus{
 	-webkit-animation: bounceright .3s alternate ease infinite;
 	animation: bounceright .3s alternate ease infinite;
 }
-
 
