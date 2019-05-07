@@ -380,18 +380,23 @@ a{
 	background: transparent;
   box-shadow: none;
 	resize: none;
+	color: white;
 }
 .floating-label-form-group input:focus-within{
 	background-color: transparent;
+	color: white;
 }
 .floating-label-form-group input:focus{
-	background-color: transparent
+	background-color: transparent;
+	color: white;
 }
 .floating-label-form-group textarea:focus{
 	background-color: transparent;
+	color: white;
 }
 .floating-label-form-group textarea:focus-within{
 	background-color: transparent;
+	color: white;
 }
 .floating-label-form-group label {
   display: inline-block;
