@@ -544,3 +544,7 @@ input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:
 	animation: bounceright .3s alternate ease infinite;
 }
 
+label {
+	display: none;
+}
+
